@@ -8,6 +8,6 @@
         foo
       </router-link>
     </div>
-    <FloatProxy w-50 h-50 rounded-xl overflow-hidden />
+    <FloatProxy w-50 h-50 rounded-xl />
   </div>
 </template>

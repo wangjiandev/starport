@@ -1,18 +1,19 @@
 <script setup lang="ts">
-import { metadata } from '~/composables/floating'
-
-const props = defineProps<{
-  modelValue?: boolean
-}>()
-
+import { metadata, proxyEl } from '~/composables/floating'
 const attrs = useAttrs()
-
-metadata.props = props
 metadata.attrs = attrs
+
+const el = ref<HTMLElement>()
+
+onMounted(() => {
+  proxyEl.value = el.value
+})
 </script>
 
 <template>
-  <slot />
+  <div ref="el" class="bg-gray-400/10">
+    <slot />
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
