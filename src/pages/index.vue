@@ -11,6 +11,9 @@ const toggle = useToggle(mode)
       <router-link to="/foo" class="btn m-3 text-sm">
         foo
       </router-link>
+      <router-link to="/bar" class="btn m-3 text-sm">
+        bar
+      </router-link>
       <button btn @click="toggle()">
         toggle
       </button>
