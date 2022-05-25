@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { TheImageProxy } from '../composables/image'
 let size = $(useStorage('size', 100))
 
 const increment = () => {
@@ -26,7 +27,7 @@ const reset = () => {
       <div flex-1>
         @pointbiz @mat-h7 Thanks for pushing on this. I believe the proper fix is included in ed4c974, which includes an update of the utility library used for S3 operations (make sure you do an npm install or npm up). If you update to the latest code, please let me know if you have any more problems here.
       </div>
-      <FloatProxy :style="{ width: `${size}px`, height: `${size}px` }" rounded-full />
+      <TheImageProxy :style="{ width: `${size}px`, height: `${size}px` }" rounded-full />
     </div>
   </div>
 </template>
